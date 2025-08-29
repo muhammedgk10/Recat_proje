@@ -80,7 +80,7 @@ The `Header` component provides the main navigation for the application. It incl
 
 ### `Footer.jsx`
 
-The `Footer` component is displayed at the bottom of every page and contains links to social media and other relevant information.
+The `Footer` component is displayed at the bottom of every page and contains links to social media and other relevant information. It now includes a link to GitHub.
 
 ### `CourseCard.jsx`
 
@@ -150,4 +150,7 @@ Currently, the application primarily uses component state (`useState`) for manag
 
 ## Current Implementation Plan
 
-There are no active implementation plans at the moment. The initial development is complete.
+### Add GitHub Link to Footer
+- [x] Add GitHub icon to `Footer.jsx`.
+- [ ] Get GitHub profile URL from user.
+- [ ] Update `Footer.jsx` with the correct GitHub profile URL.

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa';
 
 const FooterContainer = styled.footer`
   background-color: #1d1d1f;
@@ -89,6 +89,7 @@ const Footer = () => {
             <a href="#"><FaTwitter /></a>
             <a href="#"><FaInstagram /></a>
             <a href="#"><FaLinkedin /></a>
+            <a href="#"><FaGithub /></a>
           </SocialMediaLinks>
         </FooterSection>
       </FooterContent>
