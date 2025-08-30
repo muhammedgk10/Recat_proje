@@ -89,7 +89,7 @@ const Footer = () => {
             <a href="#"><FaTwitter /></a>
             <a href="#"><FaInstagram /></a>
             <a href="#"><FaLinkedin /></a>
-            <a href="#"><FaGithub /></a>
+            <a href="https://github.com/muhammedgk10?tab=repositories"><FaGithub /></a>
           </SocialMediaLinks>
         </FooterSection>
       </FooterContent>
