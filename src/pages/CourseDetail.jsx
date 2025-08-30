@@ -1,30 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
+import { Container, Image, Row, Col } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
-
-const CourseDetailContainer = styled.div`
-  padding: 2rem;
-  max-width: 800px;
-  margin: 0 auto;
-`;
-
-const CourseImage = styled.img`
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-  border-radius: 0.5rem;
-  margin-bottom: 2rem;
-`;
-
-const CourseTitle = styled.h1`
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-`;
-
-const CourseDescription = styled.p`
-  font-size: 1.25rem;
-  line-height: 1.6;
-`;
 
 const coursesData = [
   {
@@ -52,15 +28,27 @@ const CourseDetail = () => {
   const course = coursesData.find(c => c.id === parseInt(id));
 
   if (!course) {
-    return <div>Kurs bulunamadı!</div>;
+    return (
+      <Container className="text-center my-5">
+        <h2>Kurs bulunamadı!</h2>
+      </Container>
+    );
   }
 
   return (
-    <CourseDetailContainer>
-      <CourseImage src={course.image} alt={course.title} />
-      <CourseTitle>{course.title}</CourseTitle>
-      <CourseDescription>{course.description}</CourseDescription>
-    </CourseDetailContainer>
+    <Container className="my-5">
+      <Row>
+        <Col md={12}>
+          <Image src={course.image} alt={course.title} fluid rounded className="mb-4" style={{ maxHeight: '400px', width: '100%', objectFit: 'cover' }}/>
+        </Col>
+      </Row>
+      <Row>
+        <Col md={12}>
+          <h1>{course.title}</h1>
+          <p className="lead">{course.description}</p>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 

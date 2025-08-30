@@ -1,21 +1,12 @@
 import React from 'react';
-import styled from 'styled-components';
-
-const BlogContainer = styled.div`
-  padding: 2rem;
-`;
-
-const BlogTitle = styled.h1`
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-`;
+import { Container } from 'react-bootstrap';
 
 const Blog = () => {
   return (
-    <BlogContainer>
-      <BlogTitle>Blog</BlogTitle>
+    <Container className="my-5">
+      <h1>Blog</h1>
       <p>Burada blog yazıları listelenecek.</p>
-    </BlogContainer>
+    </Container>
   );
 };
 

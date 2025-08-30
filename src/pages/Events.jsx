@@ -1,21 +1,12 @@
 import React from 'react';
-import styled from 'styled-components';
-
-const EventsContainer = styled.div`
-  padding: 2rem;
-`;
-
-const EventsTitle = styled.h1`
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-`;
+import { Container } from 'react-bootstrap';
 
 const Events = () => {
   return (
-    <EventsContainer>
-      <EventsTitle>Etkinlikler</EventsTitle>
+    <Container className="my-5">
+      <h1>Etkinlikler</h1>
       <p>Burada tüm etkinlikler listelenecek.</p>
-    </EventsContainer>
+    </Container>
   );
 };
 

@@ -1,21 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
+import { Container, Row, Col } from 'react-bootstrap';
 import CourseCard from '../components/CourseCard';
-
-const CoursesContainer = styled.div`
-  padding: 2rem;
-`;
-
-const CoursesTitle = styled.h1`
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-`;
-
-const CoursesGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 2rem;
-`;
 
 const coursesData = [
   {
@@ -40,14 +25,16 @@ const coursesData = [
 
 const Courses = () => {
   return (
-    <CoursesContainer>
-      <CoursesTitle>Eğitimler</CoursesTitle>
-      <CoursesGrid>
+    <Container>
+      <h1 className="my-4">Eğitimler</h1>
+      <Row>
         {coursesData.map(course => (
-          <CourseCard key={course.id} course={course} />
+          <Col key={course.id} sm={12} md={6} lg={4} className="mb-4">
+            <CourseCard course={course} />
+          </Col>
         ))}
-      </CoursesGrid>
-    </CoursesContainer>
+      </Row>
+    </Container>
   );
 };
 
